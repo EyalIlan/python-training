@@ -1,0 +1,114 @@
+body{
+    box-sizing: border-box;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+h2,h3{
+    margin: 20px 0;
+}
+
+.main-container{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+
+.content-container{
+    
+    height: 80vh;
+    width: 70vw;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.content-container::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url('../images/wordsBackround.png');
+    opacity: 0.1;
+}
+
+
+.bottom-container{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    /* background-color: green; */
+    height: 25vh;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.text-big{
+    font-size: 80px;
+}
+
+.text-medium{
+    font-size: 40px;
+}
+
+.grid{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    max-width: 60vw;
+    margin-top: 60px;
+}
+
+
+.button {
+    border: none;
+    color: white;
+    padding: 22px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+.button2 {
+    background-color: #008CBA;
+} /* Blue */
+
+.button2:hover{
+    background-color: #003bba;
+}
+
+.button3 {
+    background-color: #f44336;
+} /* Red */ 
+
+.button3:hover{
+    background-color: #ec1a0b;
+}
+.button4 {
+    background-color: #ce8105; 
+    color: white;
+} 
+
+.button4:hover{
+    background-color: #946e04; 
+}
+
+.button5 {background-color: #555555;} /* Black */

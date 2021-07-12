@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Typing Speed</title>
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel = "icon" href = 
+    "https://image.winudf.com/v2/image1/ZGV2LmdpYW1tYS50eXBlX3JhY2VyX2ljb25fMTU2MTY0MDAzNF8wNjY/icon.png?w=&fakeurl=1" 
+            type = "image/x-icon">
+    <link rel="stylesheet" href="css/style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id = "game-container">
+        <div id="countdown" class="container-object">
+          <div>
+            <h2>Words left</h2>
+            <h2 id="numberOfWordsLeft"></h2>
+          </div>
+          <div>
+            <h2>
+              Countdown
+              <h2 id="timer_countdown">00:00:00</h2>
+            </h2>
+          </div>
+        </div>
+        
+        <div class="container-object"><div id="word_to_be_displayed">word_to_be_displayed</div></div>
+        <h3>Your Word</h3>
+        <div class="container-object"><input id = "word_input" type="text" autofocus > </input></div>
+        <div class="container-object" id="explenation">type the words displayed as fast as you can</div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
+
+<!-- 
+    when game starts countdown from 60 and display seconds in countdown div
+    everytime the word in the input equals the word in the word_to_be_displayed :
+        add 1 to the score 
+        get a new word and display it 
+        empty and focus input
+    when reaches 0 :
+        stop the game
+        display end screen with restart btn, score, and high score 
+        send high score to server
+
+
+
+-->

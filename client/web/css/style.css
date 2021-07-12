@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop:ital@1&display=swap');
+
+
+body {
+  /* margin: 0em; */
+  /* background: url("../img/background.jpg"); */
+  box-sizing: border-box;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+.wrap-container{
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  z-index: 1;
+  background-color: rgb(0, 0, 0);
+  opacity: 1;
+}
+
+.wrap-container::after{
+  content: '';
+  background: url("../images/wordsBG2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+
+.start-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 95vh;
+}
+
+.start-title {
+  font-family: 'Otomanopee One', sans-serif;
+  /* font-family: "Bangers", cursive; */
+  color: hsl(315, 88%, 67%);
+  font-size: 10rem;
+  font-weight: bold;
+  margin-top: 60px;
+  
+}
+
+.btn {
+  font-size: inherit;
+  background-color: hsl(313, 88%, 67%);
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(24, 23, 23);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: hsl(323, 94%, 50%);
+}
+
+.start-btn {
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+.start-btn:first-child {
+  margin-left: 0;
+}
+
+/* Animation*/
+
+
+.wrapper {
+  text-align: center;
+  margin-top: 40px;
+}
+.wrapper h1 {
+  color: #fff;
+  font-size: 122px;
+  font-family: "ubuntu";
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
+  /* background: linear-gradient(to right, #095fab 10%, #25abe8 50%, #57d75b 60%); */
+  background: linear-gradient(to right, #facbf3 10%, #d441f1 50%, #fc1fb2 60%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
