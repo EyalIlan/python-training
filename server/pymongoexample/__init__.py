@@ -1,11 +1,11 @@
 from flask import Flask
 
-from .extensions import mongo
-from .main import main
+from extensions import mongo
+from main import main
 
+app = Flask(__name__)
 
 def create_app(config_object = 'pymongoexample.settings'):
-    app = Flask(__name__)
     app.config.from_object(config_object)
     mongo.init_app(app)
     app.register_blueprint(main)
@@ -13,8 +13,8 @@ def create_app(config_object = 'pymongoexample.settings'):
 
 
 
-# if __name__ == "__main__":
-#     app.run()
+if __name__ == "__main__":
+    app.run()
 
 
 

@@ -1,26 +1,45 @@
 from math import log
 import eel
+import requests
 from pymongo import MongoClient
 import random
 
 
 words = ["oren", "eyal", "chen"] 
+WordSLengthLock = True
+
+
+
+# oren =  requests.get('https://api.chucknorris.io/jokes/random')
+# oren = oren.json()
+
+
+# # oren2 = requests.post('https://api.chucknorris.io/jokes/random', data = payload)
+
+# print(oren['value'])
+
 
 def mongo_init():  # Local function
     global user
-
     client = MongoClient('localhost', 27017)
     db = client.eel_database
     user = db.users
 # C:\Users\97250\AppData\Local\Programs\Python\Python39-32
 
 
+
 # return callback function
 
 @eel.expose  # Eel function  
 def get_word():  # Example to send data for javascript/html
-    global words
 
+    global words
+    global WordSLengthLock
+    
+    if WordSLengthLock == True:
+        eel.SetWordsLength(len(words))
+
+    WordSLengthLock = False
     word = None
 
     if len(words) > 0:
@@ -62,15 +81,6 @@ def get_users():
         x.pop("_id")  # Remove objects id
         all_users.append(x)
     return all_users
-
-
-
-# -----------------------------------------------------------
-
-    # list of letters
-
-
-# ------------------------------------------------------------
 
 
 

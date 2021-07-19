@@ -73,7 +73,6 @@ eel.expose(SuccessAllWords)
 function SuccessAllWords(Length){
     LengthWords.innerHTML = Length
     document.getElementById("word_to_be_displayed").innerText = 'Success!!!'
-
     window.location.href = 'winPage.html'
 
 }
@@ -84,3 +83,13 @@ function get_word_python(x,Length){
     WriteWord = x
     document.getElementById("word_to_be_displayed").innerText = WriteWord
 }
+
+eel.expose(SetWordsLength)
+function SetWordsLength(length){
+
+
+    localStorage.setItem('Words',length)
+
+}
+
+
